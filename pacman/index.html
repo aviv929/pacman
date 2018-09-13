@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+         <link rel="stylesheet" type="text/css"  href="style.css" />
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+         <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+
+
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+        <script type="text/javascript" src="logic.js"></script>
+
+
+    </head>
+
+     <body>
+
+     <div id="Header">The "Pacman" Game - - -  Shani Ben Haim-311134563, Aviv Turjeman-123456789
+     <img style="float:right; margin:0" src="pac.png" height="60px">
+     </div>
+
+     <div id="Menu">
+
+
+         <button style="margin-top: 60px" class="menuB" type="button" onclick="main()"><span><b>Welcome!</b></span></button>
+         <br>
+         <button class="menuB" type="button" onclick="login()"><span><b>Login</b></span></button>
+         <br>
+         <button class="menuB" type="button" onclick="register()"><span><b>Register</b></span></button>
+         <br>
+         <button onclick="document.getElementById('id01').style.display='block'" class="menuB"><span><b>About</b></span></button>
+
+
+         <div class="w3-container">
+             <div id="id01" class="w3-modal">
+                 <div style="background-color: paleturquoise" class="w3-modal-content w3-animate-top w3-card-4">
+                     <header class="w3-container w3-teal">
+                     <span onclick="document.getElementById('id01').style.display='none'"
+               class="w3-button w3-display-topright">&times;</span>
+                         <h2 style="color: paleturquoise"><b>Shani Ben Haim & Aviv Turjeman</b></h2>
+                     </header>
+                     <div class="w3-container">
+                         <p style="color: darkcyan; font-size: 22px;">
+                             We using Jquery at the validation options (like - test), we also used it functions - ready(), val(), we use a lot of the "$" and "#" selectors , etc..
+                             <br>We using templates at the modal dialog from w3c.
+                             <br>The difficulties we encountered at this assigment is actually all the job - it was the first time we actually programmed at JS.<br>
+                             Starting from designing the site and adapting it to any version, adding music, writing functions and pass their parameters, and synchronizing processes to match the game.<br>
+                             It was very satisfying to get that result, Enjoy!
+                         </p>
+                     </div>
+                     <footer class="w3-container w3-teal">
+                         <p style="color:paleturquoise">For More Details - 0524002502 / 0512345678</p>
+                     </footer>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+
+
+
+     <div id="Content">
+
+
+     <div id="main">
+         <br><br><br><br><br><br>
+         <button class="welcomB" type="button" class="buttonWelcome" onclick="login()"><span><b>Login</b></span></button>
+         <button class="welcomB" type="button" onclick="register()"><span><b>Register</b></span></button>
+     </div>
+
+     <div id="register" hidden="true">
+         <br><br><br>
+         <div class="container">
+             <hay><b>Registration</b></hay>
+             <form form style="font-size: 25px; font-family: 'Berlin Sans FB'" id="registerForm"  action="#" name="registration">
+
+                 <label for="rusername">Username</label>
+                 <input type="text" name="rusername" id="rusername" >
+                 <br>
+                 <label for="rpassword">Password</label>
+                 <input type="password" name="rpassword" id="rpassword" >
+                 <br>
+                 <label for="rfirstname">First Name</label>
+                 <input type="text" name="rfirstname" id="rfirstname" >
+                 <br>
+                 <label for="rlastname">Last Name</label>
+                 <input type="text" name="rlastname" id="rlastname" >
+                 <br>
+                 <label for="remail">Email</label>
+                 <input type="email" name="remail" id="remail" >
+                 <br>
+                 <label >Birth Date</label>
+                 <select id="day"></select>
+                 <select id="month"></select>
+                 <select id="year"></select>
+                 <br>
+                 <button type="submit" ><b>Register</b></button>
+             </form>
+         </div>
+     </div>
+
+     <div id="login" hidden="true">
+         <br><br><br><br><br><br>
+
+         <div class="container">
+             <hay><b>Login</b></hay>
+             <form id="loginForm" action="#" name="registration">
+
+                 <label style="font-family: 'Berlin Sans FB'" for="lusername">Username</label>
+                 <input type="text" name="lusername" id="lusername" >
+<br>
+                 <label style="font-family: 'Berlin Sans FB'" for="lpassword">Password</label>
+                 <input type="password" name="lpassword" id="lpassword">
+
+                 <button style="font-family: 'Berlin Sans FB'" type="button" onclick="verify()"><b>Login</b></button>
+             </form>
+         </div>
+     </div>
+
+      <div id="inputDetails" hidden="true">
+             <br><br><br><br>
+
+             <div class="container">
+                 <hay>Paramaters</hay>
+                 <form style="font-size: 25px; text-align: center;font-family: 'Berlin Sans FB'" id ="inputD" action="#" name="inputD">
+                     <label for="dBoll">Choose Number Of Bolls For The Game : <br>(between 50-90)</label>
+                     <br><input type="text" name="dBoll" id="dBoll" value="50">
+                     <br>
+                     <label for="dTime">Choose Maximun Time (in seconds) For The Game : (minimum 60)</label>
+                     <br><input type="text" name="dTime" id="dTime" value="60">
+                     <br>
+                     <label for="dMonsters">Choose Number Of Monsters For The Game : (between 1-3)</label>
+                     <br><input type="text" name="dMonsters" id="dMonsters" value="3">
+                     <br>
+                     <button type="button" class="buttonWelcome" onclick="verDetails()"><b>Lets Play</b></button>
+                 </form>
+             </div>
+         </div>
+
+      <div id="game" hidden="true">
+          <br><br><br><br>
+          <div id="details">
+              <a style="color: yellow; font-weight: bold;" id = "actorDisp"></a>
+              <br><br>
+              <b>SCORE:</b>
+              <input id="lblScore" type="text" disabled="true"/>
+              <br/><br>
+              <b>LIVE:</b>
+              <input id="lblLive" type="text" disabled="true"/>
+              <br/><br>
+              <b>TIME:</b>
+              <input id="lblTime" type="text" disabled="true"/>
+              <br><br><br>
+              <a id="startOver" class="button" href="#" onclick="stop(),moveToDetails()">Restart!</a>
+
+              <br/>
+              <audio id="audio1" src="pacMusic.mp3"></audio>
+
+          </div>
+          <div id="pacGame">
+              <canvas id="canvas" style="border:1px solid white;" height="600" width="600"></canvas>
+          </div>
+
+
+      </div>
+
+     </div>
+     <div id="footer">The "Pacman" Game! * * * * * * * * * Edited by : Shani Ben Haim and Aviv Turjeman * * * * * * * * * Contact us: 0524002502 or 0512344567</div>
+
+
+     </body>
+
+ </html>

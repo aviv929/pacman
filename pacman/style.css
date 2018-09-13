@@ -1,0 +1,222 @@
+body {
+    background-color: midnightblue;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+#main{
+    text-align: center;
+}
+#details{
+    float: left;
+    margin-left: 200px;
+    color:white;
+    font-size: 30px;
+    text-shadow:  2px 2px 2px grey;
+    font-family: "Berlin Sans FB";
+}
+#pacGame{
+    float: top;
+    text-align: center;
+
+}
+.container {
+    width: 600px;
+    margin: 40px auto;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px grey;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+}
+hay{
+    font-family: "Broadway";
+    font-size: 60px;
+    text-shadow: 4px 4px 4px darkgray;
+    color:white;
+
+}
+form {
+    font-family: "Open Sans";
+    padding: 20px;
+    background: paleturquoise;
+    color: darkcyan;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+}
+
+form input {
+    height: 30px;
+    line-height: 25px;
+    background: #fff;
+    color: #000;
+    font-family: 'Berlin Sans FB';
+    padding: 0 6px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+form button {
+    border: 0;
+    margin-bottom: 3px;
+    display: block;
+    width: 100%;
+    height: 100px;
+    height: 50px;
+    text-shadow: 2px 2px 2px grey;
+    line-height: 30px;
+    background: darkcyan;
+    color: paleturquoise;
+    margin-top: 10px;
+    cursor: pointer;
+}
+form .error {
+    color: #ff0000;
+}
+
+registerForm {
+    height: 500px;
+
+}
+
+
+.welcomB {
+
+    text-shadow: 2px 2px 8px grey;
+    border-radius: 100%;
+    background-color: skyblue;
+    border: 20px;
+    color: white;
+    padding: 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 6px 4px;
+    box-shadow: 0 8px 20px 0 #ffffff ;
+    font-family: "Berlin Sans FB";
+
+}
+
+.welcomB span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.welcomB span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.welcomB:hover span {
+    padding-right: 25px;
+}
+.welcomB:hover {
+    background-color: cornflowerblue;
+}
+.welcomB:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+#Menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+
+    text-align: center;
+    font-size: 18px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    text-shadow: 2px 2px 2px grey;
+    background:skyblue;
+
+}
+#Header {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    text-shadow: 2px 2px 2px grey;
+    position:absolute;
+    top:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background:skyblue;
+}
+#footer {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    text-shadow: 2px 2px 2px grey;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:25px;   /* Height of the footer */
+    background:skyblue;
+}
+
+.menuB
+{
+    text-shadow: 3px 3px 3px gray;
+    background-color: midnightblue;
+    color: white;
+    border:none;
+    height:60px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+@-webkit-keyframes glowing {
+    0% { background-color: #004A7F; -webkit-box-shadow: 0 0 3px #004A7F; }
+    50% { background-color: #0094FF; -webkit-box-shadow: 0 0 10px #0094FF; }
+    100% { background-color: #004A7F; -webkit-box-shadow: 0 0 3px #004A7F; }
+}
+
+@-moz-keyframes glowing {
+    0% { background-color: #004A7F; -moz-box-shadow: 0 0 3px #004A7F; }
+    50% { background-color: #0094FF; -moz-box-shadow: 0 0 10px #0094FF; }
+    100% { background-color: #004A7F; -moz-box-shadow: 0 0 3px #004A7F; }
+}
+
+@-o-keyframes glowing {
+    0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+    50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
+    100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+}
+
+@keyframes glowing {
+    0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+    50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
+    100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+}
+
+.button {
+    background-color: #004A7F;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Berlin Sans FB;
+    font-size: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}
